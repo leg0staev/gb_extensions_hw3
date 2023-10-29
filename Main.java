@@ -9,7 +9,7 @@ public class Main {
         try (Scanner scanner = new Scanner(System.in)) {
             int quantityValidation;
             do {
-                System.out.print("введите данные через пробел - ФИО др в формате dd.mm.yyyy, тел, пол (f/m): ");
+                System.out.print("введите данные через пробел - ФИО, др в формате dd.mm.yyyy, тел, пол (f/m): ");
                 String userInput = scanner.nextLine();
 
                 quantityValidation = validator.setUserData(userInput);
