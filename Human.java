@@ -4,7 +4,7 @@ public class Human {
     protected String patronymic = null;
     protected String birthday = null;
     protected String gender = null;
-    protected Integer phone = null;
+    protected Long phone = null;
 
     
     public void setSurname(String surname) {
@@ -22,7 +22,7 @@ public class Human {
     public void setGender(String gender) {
         this.gender = gender;
     }
-    public void setPhone(Integer phone) {
+    public void setPhone(Long phone) {
         this.phone = phone;
 
         
@@ -42,7 +42,7 @@ public class Human {
     public String getGender() {
         return gender;
     }
-    public Integer getPhone() {
+    public Long getPhone() {
         return phone;
     }
     
