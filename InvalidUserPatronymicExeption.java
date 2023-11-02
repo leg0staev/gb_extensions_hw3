@@ -1,7 +1,9 @@
-public class InvalidUserPatronymicExeption extends NullPointerException {
+import java.io.IOException;
+
+public class InvalidUserPatronymicExeption extends IOException {
 
     InvalidUserPatronymicExeption() {
-        super("Отчество не указано или указана не в верном формате");
+        super("Отчество не указано!");
     }
     
 }

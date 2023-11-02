@@ -1,7 +1,9 @@
-public class InavalidUserNameException extends NullPointerException {
+import java.io.IOException;
+
+public class InavalidUserNameException extends IOException {
 
     InavalidUserNameException() {
-        super("Имя не указано или указано не в верном формате");
+        super("Имя не указано!");
     }
     
 }

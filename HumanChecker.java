@@ -37,4 +37,8 @@ public class HumanChecker {
             throw new InvalidUserBirthdayExeption();
     }
 
+    public void setHumanGender(String gender) {
+        this.h.setGender(gender);
+    }
+
 }
