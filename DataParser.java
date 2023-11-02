@@ -1,6 +1,6 @@
 import java.util.regex.*;
 
-public class DataValidator {
+public class DataParser {
     protected String[] userData = new String[6];
 
 
