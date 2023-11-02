@@ -17,39 +17,39 @@ public class DataValidator {
         return 1;
     }
 
-    public String searchDate(String[] array) {
+    public String searchDate() {
         String pattern = "\\d{2}\\.\\d{2}\\.\\d{4}";
 
         String date = null;
 
-        for (int index = 0; index < array.length; index++) {
-            if (array[index] != null && Pattern.matches(pattern, array[index])) {
-                date = array[index];
+        for (int index = 0; index < this.userData.length; index++) {
+            if (this.userData[index] != null && Pattern.matches(pattern, this.userData[index])) {
+                date = this.userData[index];
             }
         }
         return date;
     }
 
-    public String searchGender(String[] array) {
+    public String searchGender() {
 
         String gender = null;
 
-        for (int index = 0; index < array.length; index++) {
-            if (array[index] != null && (array[index].equals("m") || array[index].equals("f"))) {
-                gender = array[index];
+        for (int index = 0; index < this.userData.length; index++) {
+            if (this.userData[index] != null && (this.userData[index].equals("m") || this.userData[index].equals("f"))) {
+                gender = this.userData[index];
             }
         }
 
         return gender;
     }
 
-    public Long searchPhone(String[] array) {
+    public Long searchPhone() {
 
         Long phone = null;
 
-        for (int index = 0; index < array.length; index++) {
+        for (int index = 0; index < this.userData.length; index++) {
             try {
-                phone = Long.parseLong(array[index]);
+                phone = Long.parseLong(this.userData[index]);
 
             } catch (NumberFormatException e) {
 
@@ -59,10 +59,10 @@ public class DataValidator {
         return phone;
     }
 
-    public String searchSurname(String[] array, Human h) {
+    public String searchSurname(Human h) {
 
         String surname = null;
-        for (String string : array) {
+        for (String string : this.userData) {
             if (!string.equals(h.getBirthday()) && !string.equals(h.getGender())
                     && !string.equals(Long.toString(h.getPhone()))) {
                 surname = string;
@@ -72,10 +72,10 @@ public class DataValidator {
         return surname;
     }
 
-    public String searchName(String[] array, Human h) {
+    public String searchName(Human h) {
 
         String name = null;
-        for (String string : array) {
+        for (String string : this.userData) {
             if (!string.equals(h.getBirthday())
                     && !string.equals(h.getGender())
                     && !string.equals(Long.toString(h.getPhone()))
@@ -88,11 +88,11 @@ public class DataValidator {
         return name;
     }
 
-    public String searchPatronymic(String[] array, Human h) {
+    public String searchPatronymic(Human h) {
 
         String patronymic = null;
 
-        for (String string : array) {
+        for (String string : this.userData) {
             if (!string.equals(h.getBirthday())
                 && !string.equals(h.getGender())
                 && !string.equals(Long.toString(h.getPhone()))
