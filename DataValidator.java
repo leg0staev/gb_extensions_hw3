@@ -3,9 +3,6 @@ import java.util.regex.*;
 public class DataValidator {
     protected String[] userData = new String[6];
 
-    // public Validator(String userData){
-    // this.userData = userData.split(" ");
-    // }
 
     public int setUserData(String data) {
         String[] userData = data.split(" ");
