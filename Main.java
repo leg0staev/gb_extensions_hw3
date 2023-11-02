@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        DataValidator validator = new DataValidator();
+        DataParser validator = new DataParser();
         Human human = new Human();
         
         String userInput;
@@ -39,6 +39,5 @@ public class Main {
         human.setPatronymic(validator.searchPatronymic(human));
 
         System.out.println(human);
-
     }
 }
