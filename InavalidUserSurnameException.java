@@ -1,7 +1,9 @@
-public class InavalidUserSurnameException extends NullPointerException {
+import java.io.IOException;
+
+public class InavalidUserSurnameException extends IOException {
 
     InavalidUserSurnameException() {
-        super("Фамилия не указана или указана не в верном формате");
+        super("Фамилия не указана!");
     }
     
 }
