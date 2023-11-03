@@ -1,3 +1,6 @@
 .gitignore
 Test.java
-/home/legostaev/Документы/programming/gb/extencions/gb_extensions_hw3/gb_extensions_hw3/Test.java
+DataChecker.java
+HumanChecker.java
+Main.java
+
