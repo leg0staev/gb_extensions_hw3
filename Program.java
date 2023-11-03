@@ -69,7 +69,7 @@ public class Program {
                 System.out.print("введите телефон: ");
                 userPhone = scanner.nextLine();
                 checker.checkPhone(userPhone);
-                human.setBirthday(userPhone);
+                human.setPhone(Long.parseLong(userPhone));
                 break;
             } catch (InvalidUserPhoneExeption iupe) {
                 System.out.println(iupe.getMessage());
@@ -83,7 +83,7 @@ public class Program {
                 System.out.print("введите Ваш пол: ");
                 userGender = scanner.nextLine();
                 checker.checkGender(userGender);
-                human.setBirthday(userGender);
+                human.setGender(userGender);
                 break;
             } catch (InvalidUserGenderExeption iuge) {
                 System.out.println(iuge.getMessage());
@@ -92,5 +92,10 @@ public class Program {
         }
 
         scanner.close();
+
+        System.out.println("Данные собраны. Сохраняю в файл");
+
+        DataSaver saver = new DataSaver(human);
+        saver.saveToFile();
     }
 }
