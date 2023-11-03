@@ -1,7 +1,13 @@
-public class InvalidUserBirthdayExeption extends NullPointerException {
+public class InvalidUserBirthdayExeption extends RuntimeException {
+
+
+    InvalidUserBirthdayExeption(String date) {
+        super("формат даты длжен быть dd.mm.yyyy!");
+    } 
+
 
     InvalidUserBirthdayExeption() {
-        super("Дата рождения не указана или указана не в верном формате");
+        super("Дата рождения не указана!");
     }
     
 }

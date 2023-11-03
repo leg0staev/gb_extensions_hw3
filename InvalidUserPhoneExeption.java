@@ -1,7 +1,11 @@
-public class InvalidUserPhoneExeption extends NullPointerException {
+public class InvalidUserPhoneExeption extends NumberFormatException {
+
+    InvalidUserPhoneExeption(String phone) {
+        super("Введите телефон цифрами!");
+    }
 
     InvalidUserPhoneExeption() {
-        super("Телефон не указан или указан не в верном формате");
+        super("Телефон не указан!");
     }
     
 }

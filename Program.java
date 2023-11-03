@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Program {
@@ -19,8 +18,6 @@ public class Program {
             } catch (InavalidUserSurnameException iuse) {
                 System.out.println(iuse.getMessage());
 
-            } catch (IOException ioe) {
-                System.out.println(ioe.getMessage());
             }
         }
 
@@ -35,8 +32,6 @@ public class Program {
             } catch (InavalidUserNameException iune) {
                 System.out.println(iune.getMessage());
 
-            } catch (IOException ioe) {
-                System.out.println(ioe.getMessage());
             }
         }
 
@@ -48,11 +43,51 @@ public class Program {
                 checker.checkPatronymic(userPatronymicInput);
                 human.setPatronymic(userPatronymicInput);
                 break;
-            } catch (InvalidUserPatronymicExeption iune) {
-                System.out.println(iune.getMessage());
+            } catch (InvalidUserPatronymicExeption iupe) {
+                System.out.println(iupe.getMessage());
 
-            } catch (IOException ioe) {
-                System.out.println(ioe.getMessage());
+            }
+        }
+
+        while (true) {
+            try {
+                String userBirthday;
+                System.out.print("введите др в формате dd.mm.yyyy: ");
+                userBirthday = scanner.nextLine();
+                checker.checkDate(userBirthday);
+                human.setBirthday(userBirthday);
+                break;
+            } catch (InvalidUserBirthdayExeption iube) {
+                System.out.println(iube.getMessage());
+
+            }
+        }
+
+        while (true) {
+            try {
+                String userPhone;
+                System.out.print("введите телефон: ");
+                userPhone = scanner.nextLine();
+                checker.checkPhone(userPhone);
+                human.setBirthday(userPhone);
+                break;
+            } catch (InvalidUserPhoneExeption iupe) {
+                System.out.println(iupe.getMessage());
+
+            }
+        }
+
+        while (true) {
+            try {
+                String userGender;
+                System.out.print("введите Ваш пол: ");
+                userGender = scanner.nextLine();
+                checker.checkGender(userGender);
+                human.setBirthday(userGender);
+                break;
+            } catch (InvalidUserGenderExeption iuge) {
+                System.out.println(iuge.getMessage());
+
             }
         }
 
